@@ -1,0 +1,62 @@
+<%= form_with(model: vecino) do |form| %>
+  <% if vecino.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vecino.errors.count, "error") %> prohibited this vecino from being saved:</h2>
+
+      <ul>
+        <% vecino.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :rut %>
+    <%= form.text_field :rut %>
+  </div>
+
+  <div class="field">
+    <%= form.label :apellidop %>
+    <%= form.text_field :apellidop %>
+  </div>
+
+  <div class="field">
+    <%= form.label :apellidom %>
+    <%= form.text_field :apellidom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nacimiento %>
+    <%= form.date_select :nacimiento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :educacion %>
+    <%= form.text_field :educacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idioma %>
+    <%= form.text_field :idioma %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
